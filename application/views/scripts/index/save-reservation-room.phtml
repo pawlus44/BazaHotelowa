@@ -1,0 +1,29 @@
+<div class='hotel_row_panel_2'>
+
+	<?php if($this->statusSave){ ?>
+		<center><span style="color:green; font-weight:bold">Rezerwacja przebiegła pomyśle.<br> Szczegóły rezerwacji znajdziesz w panelu klienta</span></center>
+	<?php } else { ?>
+		<?php if($this->isLogin) {?>
+			<center><span style="color:red; font-weight:bold">Błąd.<br> Odświerz przeglądarkę i spróbuj jeszcze raz.</span></center>
+		<?php } ?>
+	<?php } ?>
+
+
+	<?php if($this->isLogin) {?>
+		<script type="text/javascript">
+		$('.info_reservation').remove();
+		$('.select-data').remove();
+		</script>
+
+	<?php } else {?>
+		<center><span style='color:red; font-weight: bold; text-align: center;' class='login_info_required'> 
+		Aby skorzytsać z rezerwacji on-line należy być zalogowanym.
+		</span></center>
+		<div style="margin-top:20px;" class='container-login-form'>
+		<input type='hidden' value='reservation' name='redirect_name'>
+		<?php echo $this->render('auth-user/login-form.phtml'); ?>
+		</div>
+
+	<?php } ?>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="komunikat">
+<?php echo $this->komunikat; ?>
+</div>
+
+
+
+<?php
+if($this->isLogin == 0){
+    echo $this->render('partialViews/navigateMenuLogout.phtml');
+}
+
+?>

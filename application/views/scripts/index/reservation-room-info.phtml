@@ -1,0 +1,53 @@
+<div class='hotel_row_panel_2'>
+	<table class='table-list-offer table-list-available-reservation' id='table-list-reservation'>
+	        	<tr>
+	        		<td>Wielkość pokoju</td>
+	        		<td>cena za osobę</td>
+	        		<td>cena za pokój</td>
+	        		<td>łazienka</td>
+	        		<td><span style="color: blue;">REZERWACJA</span></td>
+	        	</tr>
+
+	        	<?php if(!$this->displayList){ ?>
+	        		<center><span style="color:red; font-weight:bold;">
+	        			Brak wolnych pokoi w podanym terminie!
+	        		</span></center>
+	        	<?php } ?>
+
+
+	        	<?php foreach($this->listRooms as $key => $room){?>
+	        		<tr>
+		        		<td><?php echo $room['number_bad'].' .os'; ?></td>
+		        		<td><?php echo $room['price_per_person'].' zł'; ?></td>
+		        		<td><?php echo $room['price_per_room'].' zł'; ?></td>
+		        		<td><?php if ($room['bathroom_in_room'] == 'no'){
+	        					echo 'nie';
+		        			} else {
+		        				echo 'tak';
+		        			} 
+	        			?>
+	        			</td>
+		        		<td>
+			        		<input type='checkbox' 
+			        			   name='room_reserve[]' 
+			        			   value="<?php echo $key; ?>"  
+			        			   data-idconf="<?php echo $room['id_configuration']; ?>"
+			        			   data-number_bad="<?php echo $room['number_bad']; ?>"
+			        		>
+		        		</td>
+	        		</tr>
+	        	<?php } ?>
+	</table>
+</div>
+<div class="hotel_row_4">
+	<center>
+        <span class='errors_data_save' style='color:red; font-weight:bold; display:none;'>
+        </span>
+    </center>
+
+	<button class='button_dark_blue' 
+				id='save_reservation'>
+                        Wykonaj rezerwacje
+    </button>
+
+</div>

@@ -1,0 +1,60 @@
+<?php if($this->isLogin == 0){ ?>
+<div id="form_login" class="form_size_1 form_center">
+    <div style="width: 237px; height: 51px;" id="container_labelek" class="form_br form_br_orange">
+        <div class="form_size_1_label ">
+            LOGOWANIE
+        </div>
+        <div class="form_size_1_logo">
+            <img src="<?php echo $this->serverUrl();?>/images/form/login.png" />
+        </div>
+    </div>
+    <div class="form_content form_br_content form_br_grey">
+        <form method="<?php echo $this->loginForm->getMethod();?>"
+              id="login_form">
+
+
+              <div id="<?php echo 'div-'.'form_user' ;?>">
+                <?php echo $this->loginForm->getSubForm('subform_login')->render(); ?>
+                
+              </div>
+              <div class="submit_login">                   
+              </div>
+
+        </form>
+        <button id='buttom_login' class="button_dark_orange">
+                      Zaloguj
+        </button>
+        <br>
+
+        <center>
+        <a class="link_clear" style="color:blue; font-size:14px;" href="
+                        <?php echo $this->url(array('controller' => 'auth-user', 'action' => 'register-user-form')); ?>">
+                          Rejestracja nowego użytkownika 
+        </a>
+        </center>
+      
+    </div>
+
+
+</div>
+<?php }else{} ?>
+
+<div class="komunikat">
+<center>
+<?php echo $this->komunikat; ?>
+</center>
+</div>
+
+
+<?php
+if($this->isLogin == 1  ){
+    if($this->hasHotel){
+        echo $this->render('partialViews/navigateMenuAdminHotel.phtml');
+    } else {
+        echo $this->render('partialViews/navigateMenuClient.phtml');
+    }
+}
+
+?>
+
+ <script src="<?php echo $this->baseUrl('js/auth/login.js') ?>"></script>

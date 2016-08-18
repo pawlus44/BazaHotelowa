@@ -1,0 +1,10 @@
+<div class="edit_2_container br_color_orange ">
+	<div class="edit_1_info">
+		Rezerwacje aktualnie trwające
+	</div>
+		<input type='hidden' name='status_reservation' value="2">
+		<?php echo  $this->partial('partialViews/listReservation.phtml',array('listReservation' => $this->listReservation));?>
+
+</div>
+
+<script src="<?php echo $this->baseUrl('js/hotel/manage_reservation.js') ?>"></script>

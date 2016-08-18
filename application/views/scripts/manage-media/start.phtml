@@ -1,0 +1,31 @@
+<div class="edit_2_container br_color_red ">
+	<form id='hotel-logo-form' class="dropzone" action="/manage-media/save-logo">
+		
+			<div class="edit_1_info">
+			Logo/zdjęcie hotelu
+			</div>
+
+			<div class="row_1_sec" style="display: none;">
+				<?php echo $this->formHotelLogo->getElement('hotel_logo')->render(); ?>
+				<div class='name_configuration_error error_form'>
+				</div>
+
+			</div>
+	</form>
+	<div class='actually_logo_hootel'>
+	<span>Aktualne logo/zdjęcie hotel:</span><br>
+	<?php if($this->hotel->name_logo_file != '') { ?>
+		<img src="
+		<?php echo $this->serverUrl().'/hotel_media/hotel_'.$this->hotel->id_hotel.'/'.$this->hotel->name_logo_file; ?>" 
+		>
+		<?php } else { ?>
+		<img src="
+		<?php echo $this->serverUrl().'/hotel_media/hotel_default/default.png'; ?>" 
+		>
+		 <?php } ?>
+
+	</div>
+
+</div>
+<script src="<?php echo $this->baseUrl('js/dropzone.js') ?>"></script>
+<script src="<?php echo $this->baseUrl('js/hotel/add_logo_hotel.js') ?>"></script>

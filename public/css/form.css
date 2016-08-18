@@ -1,0 +1,381 @@
+/*************** FORMULARZ LOGOWANIA **********/
+
+/* rozmiar */
+.form_size_1{
+    width: 237px;
+
+}
+
+.form_size_1_label{
+    width: 195px;
+    height: 51px;
+
+    text-align: center;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 12px;
+
+    float: left;
+}
+
+.form_size_1_logo{
+    width: 38px;
+    height: 51px;
+
+    padding-top: 8px;
+    float: left;
+}
+
+/* wyrownanie */
+.form_center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* obramowanie */
+.form_br{
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+
+.form_br_content{
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+}
+
+.form_br_content_2{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+
+}
+
+.form_br_red {
+border-color: #cb3913;    
+}
+
+.form_br_blue {
+border-color: #0b59d1;
+}
+
+.form_br_green {
+border-color: #069725;
+}
+
+.form_br_orange {
+border-color: #d1b80b;
+}
+
+.form_br_grey {
+border-color: #b0b0b0;
+}
+
+
+
+/*  konkretne formularz*/
+#form_login{
+
+    width: 237px;
+    
+    font-size: 19px;
+    height: 51px;
+
+    padding-bottom: 0px;
+
+}
+
+.form_content{
+    font-size: 17px;
+    width: 237px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    border-top: none;
+
+    float: left;
+}
+
+#form_login input {
+    width: 227px;
+}
+
+.submit_login{
+    margin: 0px;
+    padding: 0px;
+}
+
+.submit_login dt {
+    display: none;
+}
+#submit_login {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 30px;
+
+    border: none;
+
+    font-weight: bold;
+    background: url('../images/form/orange_button.png') no-repeat;
+    background-position: 0px -30px;
+}
+
+#submit_login:hover {
+    background: url('../images/form/orange_button.png') no-repeat;
+    background-position: 0px 0px;
+}
+
+.errors{
+    font-size: 14px;
+    color: #cb3913;
+    list-style: none;
+    padding: 0px;
+    padding-left: 5px;
+
+}
+
+.komunikat{
+    clear: both;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.komunikat_2{
+    clear: both;
+    padding-top: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.message_ok {
+    color: green;
+}
+
+.message_not_ok {
+    color: #cb3913;
+}
+
+/*************** KONIEC FORMULARZ LOGOWANIA **********/
+
+/*************** FORMULARZ REJESTRACJI **************/
+
+#form_register {
+    clear: both;
+    width: 500px;
+    height: auto;
+}
+
+.form_size_2{
+    width: 500px;
+
+}
+
+.form_size_2_label{
+width: 500px;
+text-align: center;
+padding-top: 10px;;
+
+}
+
+.form_size_2_logo {
+   
+}
+
+.form_content_2{
+    font-size: 17px;
+    width: 500px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    /*border-top: none;*/
+
+    float: left;
+}
+
+.submit_register{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit_register dt {
+    display: none;
+}
+
+#form_user-label, #form_user_info-label, #form_user_address-label, #form_user_contact-label{
+    display: none;
+
+}
+
+#register_form div.input_container{
+    margin-top: 20px;
+}
+
+#register_form div.input_container dl dt{
+  clear: both;
+  width: 240px;
+  float: left;
+
+  text-align: right;
+      margin-right: 5px;
+      padding-top: 3px;
+}
+
+
+#register_form div.input_container dl dd{
+    width: 220px;
+    float: left;
+}
+
+#register_form input[type=text]{
+    width: 220px;
+    height: 30px;
+}
+
+#register_form label{
+    width: 220px;
+    height: 30px;
+    line-height: 1em;
+    
+}
+
+#form_user_contact-email_alter-element{
+    padding-top: 3px;
+}
+
+/*************** KONIEC FORMULARZA REJESTRACJI **************/
+
+/**** FORMULARZ DODAWANIA HOTELU ****/
+.register_hotel div.input_container{
+    margin-top: 20px;
+}
+
+
+
+
+.register_hotel div.input_container dl dt{
+  clear: both;
+  width: 140px;
+  float: left;
+
+  text-align: left;
+  margin-right: 5px;
+  padding-top: 3px;
+}
+
+
+.register_hotel div.input_container dl dd{
+    width: 320px;
+    float: left;
+}
+
+.register_hotel input[type=text],
+.register_hotel select {
+    width: 320px;
+    height: 30px;
+}
+
+.register_hotel label{
+    width: 220px;
+    height: 30px;
+    line-height: 1em;
+    
+}
+
+#hotel_address-label, #hotel_info-labell, #submit_add_hotel-label{
+    display: none;
+
+}
+
+
+.button_dark_blue {
+    border: none;
+    background: url('../images/panel/button_blue_dark.png') no-repeat;
+    background-position: 0px 0px; 
+    width: 140px;
+    height: 25px;
+    display: block;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.button_dark_blue:hover{
+    background: url('../images/panel/button_blue_dark.png') no-repeat;
+    background-position: 0px -25px;
+}
+
+.button_dark_orange {
+    border: none;
+    background: url('../images/panel/button_orange.png') no-repeat;
+    background-position: 0px 0px; 
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: 10px auto;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button_dark_orange:hover{
+    background: url('../images/panel/button_orange.png') no-repeat;
+    background-position: 0px -40px;
+    text-decoration: none;
+}
+
+.button_dark_orange_link {
+    border: none;
+    background: url('/images/panel/button_orange.png') no-repeat;
+    background-position: 0px 0px; 
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: 10px auto;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;    
+    color: #000018;
+    padding-top:10px; 
+}
+
+.button_dark_orange_link:hover{
+    background: url('/images/panel/button_orange.png') no-repeat;
+    background-position: 0px -40px;
+    text-decoration: none;
+    text-align: center;
+    color: #000018;
+}
+
+.button_dark_blue {
+    border: none;
+    background: url('/images/panel/button_blue.png') no-repeat;
+    background-position: 0px 0px; 
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: 10px auto;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.button_dark_blue:hover{
+    background: url('/images/panel/button_blue.png') no-repeat;
+    background-position: 0px -40px;
+    text-decoration: none;
+}
+
+.reservation-info{
+    background: #FFFFCC;
+    display: none;
+}
+
+.list-info-reservation{
+    width: 630px;
+}

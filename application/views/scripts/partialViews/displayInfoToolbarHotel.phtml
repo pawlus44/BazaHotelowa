@@ -1,0 +1,71 @@
+        <div id="info_toolbar">
+            
+
+                <ul id="info_tool_menu" class="menu_clear">
+                    <a class="link_clear" href="
+                        <?php echo $this->url(array(
+                                    'controller' =>'index',
+                                    'action' => 'show-search-hotel'));?>">
+                        <li>
+                            <div id="info_tool_menu_1" class="info_tool_menu">
+                                <div class="info_tool_menu_left">
+                                  wyszukiwarka<br>hoteli
+                                </div>
+                                <div class="info_tool_menu_right">
+                                  <img src='<?php echo $this->serverUrl();?>/images/menu/loop_logo.png' />
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a class="link_clear" href="
+                        <?php echo $this->url(array(
+                                    'controller' =>'manage-reservation',
+                                    'action' => 'current-reservations'));?>">
+                        <li>
+                            <div id="info_tool_menu_2" class="info_tool_menu">
+                                <div class="info_tool_menu_left special_1">
+                                rezerwacje
+                                </div>
+                                <div class="info_tool_menu_right">
+                                <img src='<?php echo $this->serverUrl();?>/images/menu/reservation_logo.png' />
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a class="link_clear" href="
+                        <?php echo $this->url(array(
+                                    'controller' =>'manage-hotel',
+                                    'action' => 'start'));?>">
+                        <li>
+                            <div id="info_tool_menu_3" class="info_tool_menu">
+                                <div class="info_tool_menu_left special_2">
+                                system<br>zarządzania<br>hotelem
+                                </div>
+                                <div class="info_tool_menu_right">
+                                <img src='<?php echo $this->serverUrl();?>/images/menu/cms_logo.png' />
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a class="link_clear" href="<?php echo $this->url(array(
+                                                                            'controller' =>'auth-user',
+                                                                            'action' => 'add-hotel'));?>">
+                        <li>
+                            <div id="info_tool_menu_4" class="info_tool_menu">
+                                <div class="info_tool_menu_left">
+                                dodaj hotel<br>do bazy
+                                </div>
+                                <div class="info_tool_menu_right">
+                                <img src='<?php echo $this->serverUrl();?>/images/menu/hotel_logo.png' />
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                </ul>
+
+            </div>
+         

@@ -1,0 +1,155 @@
+<?php //var_dump($singleHotel)?>
+
+<div class='hotel_panel' id='hotel_panel_<?php echo $this->dataHotel['hotel_info']['id_hotel']; ?>' style="margin-top:10px;">
+   <div class='hotel_row_1'>
+       <div class='hotel_image'>
+       		<img class='main_logo_hotel' src="
+       		<?php 
+              if($this->dataHotel['hotel_info']['name_logo_file'] != ''){
+                  echo $this->serverUrl()
+       				   .'/hotel_media/hotel_'
+       				   .$this->dataHotel['hotel_info']['id_hotel']
+       				   .'/'
+       				   .$this->dataHotel['hotel_info']['name_logo_file']; 
+              } else {
+                  echo $this->serverUrl()
+                 .'/hotel_media/hotel_default'
+                 .'/default.png'; 
+              }
+       			?>" 
+       		> 
+       </div>
+       <div class='hotel_cont_info_1'>
+           <div class="text_center">
+           	   <div class="hotel_name hotel_name_input">
+           	   		<?php echo $this->dataHotel['hotel_info']['name_hotel']; ?>
+           	   </div>
+           </div>
+           <div class="text_center">
+           	   <div class="hotel_address">
+               	    <?php echo $this->dataHotel['hotel_info']['city']; ?>, 
+                   <br><?php echo $this->dataHotel['hotel_info']['street']; ?> 
+                   	   <?php 
+                   	   		if($this->dataHotel['hotel_info']['number_bulid'] !=''){
+                   	   			echo $this->dataHotel['hotel_info']['number_bulid']; 
+                   	   		}
+                   	   		if($this->dataHotel['hotel_info']['number_local'] !=''){
+                   	   			echo '/'.$this->dataHotel['hotel_info']['number_local']; 
+                   	   		}
+                   	   ?>,
+                   	   <?php
+                   	   		echo $this->dataHotel['hotel_info']['code_post']; 
+                   	   		echo ' '.$this->dataHotel['hotel_info']['post']; 
+                   	   ?>
+           	   </div>
+           </div>
+
+           <div class="text_center">
+           		<div class="text_center">
+           	   		<div class="hotel_best_ofert">
+           				Nocleg już od <?php echo $this->dataHotel['room']['info']['min_price']?> zł za osobę
+           	   		</div>
+           	   	</div>
+           	   	<div class="text_center">
+           	   		<div class="hotel_button_ofert">
+           	   			<button class="button_hotel_ofert_show"  
+                            data-idhotel=<?php echo  $this->dataHotel['hotel_info']['id_hotel'] ?>>
+                    
+                        Pokaż pozostałe oferty
+                    </button>
+           	   		</div>
+           	   	</div>		
+           </div>
+
+       </div>
+       <div class='hotel_cont_info_2'> 
+         <img src="
+            <?php echo $this->serverUrl()
+                   ."/images"
+                   ."/type_hotel"
+                   ."/"
+                   .$this->dataHotel['hotel_info']['name_image']; 
+            ?>" 
+          > 
+       </div> 
+
+   </div>
+   <div class='hotel_row_4 list_all_ofert' id="list_all_ofert_<?php echo $this->dataHotel['hotel_info']['id_hotel'];  ?>" >
+      	<table class='table-list-offer'>
+        	<tr>
+        		<td>Wielkość pokoju</td>
+        		<td>cena za osobę</td>
+        		<td>cena za pokój</td>
+        		<td>łazienka w pokoju</td>
+        	</tr>
+        	<?php foreach($this->dataHotel['room']['offers'] as $key => $offer){?>
+        		<tr>
+	        		<td><?php echo $offer['number_bad'].' .os'; ?></td>
+	        		<td><?php echo $offer['price_per_person'].' zł'; ?></td>
+	        		<td><?php echo $offer['price_per_room'].' zł'; ?></td>
+	        		<td><?php if ($offer['bathroom_in_room'] === 'nie'){
+	        					echo 'tak';
+		        			} else {
+		        				echo 'nie';
+		        			} 
+	        			?>
+	        		</td>
+        		</tr>
+        	<?php } ?>
+      	</table>
+
+   </div>
+
+   <div class='hotel_row_panel_2'>
+   		<span style="color: #000018;">Opis hotelu:</span><br>
+      	
+      	<div class="desc_hotel_basic_input">
+      		<?php echo $this->dataHotel['hotel_info']['basic_description_hotel']; ?>
+      	</div>
+      	
+      	<div class="desc_hotel_extend_input desc_hotel_extend">
+         	<?php echo $this->dataHotel['hotel_info']['extend_description_hotel']; ?>
+      	</div>
+
+      	<?php if($this->dataHotel['hotel_info']['extend_description_hotel'] != '') {?>
+		    <button class="edit_table_button slide_desc_hotel" value="0">
+	        	rozwiń
+	        </button>
+        <?php } ?>
+
+     
+   </div>
+
+   <?php if(count($this->dataHotel['services']) != 0){ ?>
+      <div class='hotel_row_3'>
+     		<span style="color: #000018;">Dostępne usługi w hotelu:</span>
+     		<ul class='panel-list-services'>
+     			<?php foreach ($this->dataHotel['services'] as $key => $service) {
+     				if($service['name_image'] != ''){
+     			?>		
+     			<li>
+     				<img src="
+     					
+     					<?php echo $this->serverUrl()
+         				   .'/images'
+         				   .'/equipment_room'
+         				   .'/'
+         				   .$service['name_image']; 
+         				?>
+     					?>
+     				">
+     			</li>
+     			<?php
+     				}
+     			}
+     			?>
+     		</ul>
+     		<div style="clear:both"></div>
+     	</div>
+
+      
+    <?php } ?>
+
+
+
+</div>

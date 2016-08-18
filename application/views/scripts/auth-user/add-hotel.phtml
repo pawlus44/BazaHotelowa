@@ -1,0 +1,47 @@
+<?php if($this->isLogin == 1) { 
+
+			if(isset($this->formAddHotel)){
+
+?>
+<div id="form_register" class="form_size_2 form_center">
+    <div style="width: 500px; height: 51px;" id="container_labelek" class="form_br form_br_red form_center">
+        <div class="form_size_2_label">
+            REJESTRACJA NOWEGO HOTELU
+        </div>
+        <!--div class="form_size_1_logo">
+            <img src="../images/form/login.png" />
+        </div-->
+    </div>
+    <div class="form_content_2 form_br_content_2 form_br_grey">
+
+        <form action="<?php echo $this->formAddHotel->getAction();?>"
+              method="<?php echo $this->formAddHotel->getMethod();?>"
+              class="register_hotel">
+
+              <div class="input_container">
+                  <?php echo $this->formAddHotel->getSubForm('hotel_info')->render(); ?>
+              </div>
+              <div class="input_container">
+                  <?php echo $this->formAddHotel->getSubForm('hotel_address')->render(); ?>
+              </div>
+              
+              <div class="submit_register_hotel">
+                    <?php echo $this->formAddHotel->submit_add_hotel->render(); ?>
+              </div>            
+
+        </form>
+
+    </div>
+
+</div>
+
+<?php }} ?>
+    
+
+
+
+
+
+<div class="komunikat">
+<?php echo $this->komunikat; ?>
+</div>

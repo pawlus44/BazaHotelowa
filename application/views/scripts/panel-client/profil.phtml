@@ -1,0 +1,62 @@
+<div class="edit_1_container br_color_normal "> 
+    <div class="edit_1_info">
+        Dane kontaktowe
+    </div>
+        <div class="edit_1_container-con center_container">
+
+            <div class="edit_1_column1">
+                        <div class="edit_1_column1">
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Login:</div>
+                    <div class="edit_1_date_r_145"><?php echo $this->rowUser['login']; ?></div>
+            </div>
+
+           <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Adres e-mail:</div>
+                    <div class="edit_1_date_r_145"><?php echo $this->rowUser['email']; ?></div>
+           </div>
+
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Hasło:</div>
+                    <div class="edit_1_date_r_145">*******************</div>
+            </div>
+            
+
+        </div>
+            </div>
+
+            <div class="edit_1_column2" >
+                <div class="form_user_contact panel_form_standard">
+                    <form action="<?php echo $this->formEditPassword->getAction();?>"
+                      method="<?php echo $this->formEditPassword->getMethod();?>"
+                      id="change_password" class="form_center" >
+
+                      <div>
+                        <?php 
+                            echo $this->formEditPassword->getElement('first_password')->render();
+                            echo $this->formEditPassword->getElement('second_password')->render();
+                            ?>
+                      </div>
+                      <div class="panel_submit">
+                            <?php echo $this->formEditPassword->getElement('submit_change_password')->render(); ?>
+                      </div>
+
+                    </form>
+                </div>
+                <div style="margin: 10px 0px;">
+                    <button id="edit_change_password_button" class="edit_button_80 vertical_align" style=" display: none;" type="button"><center>Edytuj</center></button>
+                </div>
+                
+            </div>
+        </div>
+
+    <div class="edit_1_message form_user_contact_message">
+        <?php echo $this->komunikat;?>
+    </div>
+        
+    </div>
+    
+</div>
+
+
+<!-- dane -->

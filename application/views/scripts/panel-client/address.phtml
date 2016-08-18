@@ -1,0 +1,155 @@
+<div class="edit_1_container br_color_normal " id='form_user_info'>
+    <div class="edit_1_info">
+        Imię i nazwisko
+    </div>
+    <div class="edit_1_container-con center_container root_edit_container">
+
+        <div class="edit_1_column1">
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Imie/Imiona:</div>
+                    <div class="edit_1_date_r_145 form_user_info_name"><?php echo $this->rowUserInfo['name']; ?></div>
+            </div>
+
+           <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Nazwisko:</div>
+                    <div class="edit_1_date_r_145 form_user_info_surname"><?php echo $this->rowUserInfo['surname']; ?></div>
+           </div>
+
+        </div>
+
+        <div class="edit_1_column2" >
+            <div class="form_user_info">
+            </div>
+            <div>
+                <button id="edit_user_info_button" class="button_dark_blue" type="button" value="edit">
+                    <center>Edytuj dane</center>
+                </button>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+    <div class="edit_1_message form_user_info_message">
+        
+    </div>
+    
+</div>
+
+<div style="clear:both;"></div>
+
+<div class="edit_1_container br_color_normal " id="form_user_address">
+    <div class="edit_1_info">
+        Adres
+    </div>
+    <div class="edit_1_container-con center_container root_edit_container">
+
+       <div class="edit_1_column1">
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Miejscowość:</div>
+                    <div class="edit_1_date_r_145 form_user_address_city"><?php if($this->rowUserAddress['city'] != '') echo $this->rowUserAddress['city'];
+                    else echo '-'?></div>
+            </div>
+
+           <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Ulica:</div>
+                    <div class="edit_1_date_r_145 form_user_address_street"><?php if($this->rowUserAddress['street'] != '') echo $this->rowUserAddress['street'];
+                    else echo '-';?></div>
+           </div>
+
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Numer budynku:</div>
+                    <div class="edit_1_date_r_145 form_user_address_number_bulid"><?php if($this->rowUserAddress['number_bulid'] !='')echo $this->rowUserAddress['number_bulid'];
+                    else echo '-';?></div>
+            </div>
+
+           <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Numer mieszkania:</div>
+                    <div class="edit_1_date_r_145 form_user_address_number_local"><?php if($this->rowUserAddress['number_local'] != '')echo $this->rowUserAddress['number_local'];
+                    else echo '-';?></div>
+            </div>
+
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Kod pocztowy:</div>
+                    <div class="edit_1_date_r_145 form_user_address_code_post"><?php if($this->rowUserAddress['code_post']!='')echo $this->rowUserAddress['code_post'];
+                    else echo '-';?></div>
+            </div>
+
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Poczta:</div>
+                    <div class="edit_1_date_r_145 form_user_address_post"><?php if($this->rowUserAddress['post'] != '')echo $this->rowUserAddress['post'];
+                    else echo '-';?></div>
+            </div>
+
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Państwo:</div>
+                    <div class="edit_1_date_r_145 form_user_address_country"><?php if($this->rowUserAddress['country'] != '') echo $this->rowUserAddress['country'];
+                    else echo '-';?></div>
+            </div>
+
+
+        </div>
+
+        <div class="edit_1_column2" >
+            <div class="form_user_address">
+            </div>
+            <div>
+                <button id="edit_user_address_button" class="button_dark_blue" type="button" value="edit">
+                    <center>Edytuj dane</center>
+                </button>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+    <div class="edit_1_message form_user_address_message">
+        
+    </div>
+    
+</div>
+
+<div style="clear:both;"></div>
+
+<div class="edit_1_container br_color_normal " id="form_user_contact">
+    <div class="edit_1_info">
+        Dane kontaktowe
+    </div>
+    <div class="edit_1_container-con center_container root_edit_container">
+
+        <div class="edit_1_column1">
+            <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Adres e-mail (adres&nbsp;alternatywny):</div>
+                    <div class="edit_1_date_r_145 form_user_contact_email_alter">
+                    <?php echo $this->rowUserContact['email']; ?></div>
+            </div>
+
+           <div class="edit_1_date">
+                    <div class="edit_1_date_l_145">Telefon:</div>
+                    <div class="edit_1_date_r_145 form_user_contact_telephone">
+                    <?php echo $this->rowUserContact['telephone']; ?></div>
+           </div>
+
+        </div>
+
+        <div class="edit_1_column2" >
+            <div class="form_user_contact">
+            </div>
+            <div>
+                <button id="edit_user_contact_button" class="button_dark_blue" type="button" value="edit">
+                    <center>Edytuj dane</center>
+                </button>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+    <div class="edit_1_message form_user_contact_message">
+        
+    </div>
+    
+</div>

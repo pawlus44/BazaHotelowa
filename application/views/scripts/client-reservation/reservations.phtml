@@ -1,0 +1,59 @@
+<div class="edit_2_container br_color_orange ">
+	<div class="edit_1_info">
+		Lista rezerwacji
+	</div>
+		<input type='hidden' name='status_reservation' value="2">
+
+	<center><span class="communique"></span></center>
+		
+	<table class='list_reservation custom_table'>
+		<tr class='custom_table_labelrow'>
+			<td>Imię i nazwisko</td>
+			<td>Data<br>operacji</td>
+			<td>Data<br>rozpoczęcia</td>
+			<td>Ilość<br>pokoi</td>
+			<td>Status</td>
+			<td>Szczegóły</td>				
+		</tr>
+
+		<?php if( count($this->listReservation) ){ ?>
+
+			<?php foreach ($this->listReservation as $single) { ?>
+				<tr id='tr_reservation_<?php echo $single->id_reservation; ?>'>
+					<td><?php echo $single->date_add;?></td>
+					<td><?php echo $single->date_start ;?></td>
+					<td><?php echo $single->date_stop ;?></td>
+					<td><?php echo $single->number_room ;?></td>
+					<td><?php echo $this->list_status[$single->status]; ?>
+					<td>
+						<button class='edit_table_button edit_reservation' 
+								data-idreservation='<?php echo $single->id_reservation; ?>'>
+						 	Szczegóły	
+						</button>
+					</td>	
+				</tr>
+				<tr colspan class='reservation-info' id='reservation-info-<?php echo $single->id_reservation; ?>'>
+					<td colspan="6">
+
+					</td>
+				</tr>
+			<?php } ?>
+		<?php  } else { ?>
+			<tr >
+				<td><i>brak</i></td>
+				<td><i>brak</i></td>
+				<td><i>brak</i></td>
+				<td><i>brak</i></td>
+				<td><i>brak</i></td>
+				<td><i>brak</i></td>				
+			</tr>
+			
+		<?php } ?>
+
+
+	</table>
+
+</div>
+
+<script src="<?php echo $this->baseUrl('js/hotel/user_reservation.js') ?>"></script>
+

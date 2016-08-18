@@ -1,0 +1,44 @@
+<div id="sidebar_menu" class="sidebar_menu_orange">
+<ul class="menu_sidebar" >
+    <a id='manage-reservation-current-reservations' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-reservation',
+                        'action' =>'current-reservations'));?>'>
+        <li>
+            Rezerwacje aktualne
+        </li>
+    </a>
+
+    <a id='manage-reservation-waiting-reservations' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-reservation',
+                        'action' =>'waiting-reservations'));?>'>
+        <li>
+            Rezerwacje oczekujące
+        </li>
+    </a>
+
+    <a id='manage-reservation-confirmed-reservations' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-reservation',
+                        'action' =>'confirmed-reservations'));?>'>
+        <li>
+            Rezerwacje potwierdzone
+        </li>
+    </a>
+
+    <a id='manage-reservation-archive-reservations' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-reservation',
+                        'action' =>'archive-reservations'));?>'>
+        <li>
+            Rezerwacje archiwalne i anulowane
+        </li>
+    </a> 
+
+    <a id='client-reservation-reservations' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'client-reservation',
+                        'action' =>'reservations'));?>'>
+        <li class="special_top_margin_2">
+            Moje rezerwacje
+        </li>
+    </a>          
+    
+</ul>
+</div>

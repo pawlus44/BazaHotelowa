@@ -1,0 +1,25 @@
+<b>Lista zarezerwowanych pokoi:</b>
+<table class='custom_table list-info-reservation'>
+	<tr class="custom_table_labelrow">
+		<td>Oznaczenie pokoju</td>
+		<td>Wielkość</td>
+		<td>Cena za osobę</td>
+		<td>Cena za pokój</td>
+	</tr>
+
+	<?php foreach($this->info_list as $room) { ?>
+		<tr>
+			<td><?php echo $room->name_room; ?></td>
+			<td><?php echo $room->number_bad; ?></td>
+			<td><?php echo $room->price_per_person; ?></td>
+			<td><?php echo $room->price_per_room; ?> </td>
+		</tr>
+	<?php } ?>
+
+</table>
+
+<div>
+	<button class='button_dark_orange cancel_status_reservation_button' data-idreservation="<?php echo $this->id_reservation;?>">
+		Anuluj
+	</button>
+</div>

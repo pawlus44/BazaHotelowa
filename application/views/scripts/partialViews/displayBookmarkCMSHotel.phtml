@@ -1,0 +1,38 @@
+<div id="sidebar_menu" class="sidebar_menu_red">
+<ul class="menu_sidebar" >
+    
+    <a id='manage-hotel-start' class='link_clear' href='<?php echo 
+            $this->url(array('controller'=>'manage-hotel', 
+                            'action' =>'start'));?>'>
+    <li>Start</li>
+    </a>
+
+    <a id='manage-hotel-hotel' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-hotel', 
+    				    'action' =>'hotel'));?>'>
+	    <li class="special_top_margin_2">
+	    	HOTEL
+	    </li>
+    </a>
+
+    <a id='manage-media-start' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-media',
+                        'action' =>'start'));?>'>
+        <li class="">Media</li>
+    </a>
+
+    <a id='manage-configuration-room-manage-room' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-configuration-room',
+                        'action' =>'manage-room'));?>'>
+        <li class="">Konfiguracja pokoi</li>
+    </a>
+
+    <a id='manage-room-room' class='link_clear' href='<?php echo 
+        $this->url(array('controller'=>'manage-room', 
+                        'action' =>'room'));?>'>
+        <li class="">Pokoje</li>
+    </a>
+
+
+</ul>
+</div>

@@ -1,0 +1,658 @@
+#panel_menu{
+    width: 970px;
+    height: 50px;
+
+    background: #b0b0b0;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+
+
+}
+
+#main_panel_menu{
+    width: 970px;
+    height: 50px;
+
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    
+    list-style: none;
+
+     border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+
+}
+
+#main_panel_menu li{
+    height: 40px;
+    width: 315px;
+
+    background: whitesmoke;
+
+    float: left;
+    margin-right: 5px;
+
+    text-align: center;
+    font-size: 19px;
+    text-transform: uppercase;
+
+     border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    padding-top: 8px;
+
+
+}
+
+
+.li_hover{
+    border: 4px solid;
+}
+
+.li_active{
+    border: 4px solid;
+}
+
+/**  menu boczne     */
+#sidebar_menu{
+    width: 260px;
+    min-height: 400px;
+
+    margin-right: 10px;
+
+    float: left;
+
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+
+    
+}
+
+.sidebar_menu_blue{
+    margin-right: 10px;
+    background: #0f71f4 !important;
+}
+
+.sidebar_menu_orange{
+    background: #eacf16;
+}
+
+.sidebar_menu_red{
+    background: #ca401a;
+}
+
+.sidebar_menu_normal{
+background: #0398ca;
+}
+
+
+#main_content_panel {
+    width: 700px;
+    min-height: 400px;
+
+    float: left;
+
+     border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b0b0b0;
+
+    background: whitesmoke;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+.br_color_normal{
+    border-color: #0398ca !important;
+}
+
+.menu_sidebar{
+
+    width: 260px;
+
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    list-style: none;
+
+     border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+
+  
+    
+}
+
+
+.menu_sidebar li{
+    background: whitesmoke;
+
+    width: 250px;
+
+    float: left;
+    margin-top: 5px;
+
+    text-align: center;
+    font-size: 19px;
+    text-transform: uppercase;
+
+     border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.special_top_margin_1{
+    margin-top: 10px;
+}
+
+.special_top_margin_2{
+    margin-top: 60px !important;
+}
+
+.menu_sidebar li:hover{
+    background: #b0b0b0;
+    
+}
+
+
+.li_active_2{
+   background: #b0b0b0 !important;
+}
+
+/** style dla kontenerów do zmian danych**/
+.edit_1_container{
+    width: 680px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+     border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    border: 1px solid #b0b0b0;
+    display: inline-block;
+
+    margin-bottom: 10px;
+}
+
+.edit_1_info{
+    width: 680px;
+    text-align: center;
+    font-size: 19px;
+    color: #1f1748;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.edit_1_container-con{
+    width: 680px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    color: black;
+}
+
+.edit_1_column1{
+    width: 340px;
+    float: left;
+
+    
+}
+
+
+
+.edit_1_column2{
+
+    width: 340px;
+    height: auto;
+
+    float: left;
+
+    padding-left: 15px;
+    padding-right: 5px;
+
+    display: inline;
+   
+    
+}
+
+.edit_1_message{
+    clear: both;
+
+    width: 680px;
+    text-align: center;
+
+    
+}
+
+.edit_clear{
+    clear: both;
+}
+
+.edit_1_date{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 300px;
+    text-align: left;
+
+    display: inline-block;
+
+}
+
+.edit_1_date_l_145{
+    width: 145px;
+    font-weight: bold;
+    float: left;
+}
+
+.edit_1_date_r_145{
+    width: 145px;
+   
+    float: left;
+}
+
+.edit_button_80{
+    height: 30px;
+    width: 80px;
+}
+
+
+
+/** OGÓLNA FORMATAL DLA FORMULARZAY width 237**/
+
+.panel_form_standard form{
+    width: 237px;
+    font-size: 16px;
+}
+
+.panel_form_standard form input[type=text]{
+    width: 237px;
+}
+
+
+/*.panel_form_standard form input[type=submit]{
+    width: 150px;
+    height: 30px;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: url('../images/form/normal_button.png');
+}
+
+.panel_form_standard form input[type=submit]:hover
+{
+    background-position: 0px -30px;
+}*/
+
+.panel_form_standard form button{
+    width: 150px;
+    height: 30px;
+
+    margin-left: 40px;
+
+    border: none;
+
+    background: url('../images/form/normal_button.png');
+}
+
+.panel_form_standard form button:hover
+{
+    background-position: 0px -30px;
+}
+
+
+
+.panel_submit {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.panel_submit dd{
+width: 150px;
+height: 30px;
+
+margin-left: auto;
+margin-right: auto;
+}
+
+.panel_submit dt{
+    display: none;
+}
+
+
+.edit_button_80{
+    border: none;
+background: url('../images/form/normal_button_80.png');
+}
+
+.edit_button_80:hover{
+    background-position: 0px -30px;
+}
+
+
+.edit_button_150{
+    width: 150px;
+    height: 30px;
+
+
+}
+.edit_button_150{
+    border: none;
+background: url('../images/form/normal_button.png');
+}
+
+.edit_button_150:hover{
+    background-position: 0px -30px;
+}
+
+#button_change_userinfo-label{
+    display: none;
+}
+
+.message_ok{
+    font-size: 18px;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message_not_ok{
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.edit_1_message {
+    margin-top: 10px;
+}
+
+
+/**** HOTEL ****/
+
+.edit_2_container{
+    width: 685px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+     border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    border: 1px solid #b0b0b0;
+    display: inline-block;
+
+    margin-bottom: 10px;
+}
+
+.br_color_red{
+    border-color: #ca401a;
+}
+
+.br_color_orange{
+    border-color: #eacf16;
+}
+
+.edit_2_form{
+font-size: 16px;
+}
+
+.edit_2_form input, .edit_2_form select {
+    width: 650px;
+    height: 30px;
+    font-size: 16px;
+
+    border-radius: 5px;
+    border: 1px solid #E6E6E6
+}
+
+.row_1_sec {
+    width: 665px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.row_1_sec input[type=text], .row_1_sec select {
+    width: 665px;
+    height: 30px;
+    font-size: 16px;
+
+    border-radius: 5px;
+    border: 1px solid #E6E6E6
+}
+
+.row_1_sec dd label{
+}
+
+.row_1_sec dd input[type=radio]{
+    width: 20px;
+}
+
+.row_radio dd label {
+display: inline-block; 
+margin-left: 8px;
+}
+
+.row_radio input[type=radio], .row_radio input[type=checkbox]{
+    margin-right: 2px;
+}
+
+.row_2_sec{
+    float: left;
+    width: 325px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.row_2_sec_lf{
+    float: left;
+    width: 325px;
+    margin-right: 15px; 
+    margin-top: 15px;
+    font-size: 16px;  
+}
+
+.row_2_sec input[type=text], .row_2_sec select,
+.row_2_sec_lf input[type=text], .row_2_sec_lf select {
+    width: 325px;
+    height: 30px;
+    font-size: 16px;
+
+}
+
+
+
+/*.row_1_sec input:hover, .row_1_sec select:hover, .row_2_sec input:hover, .row_2_sec select:hover,
+.row_2_sec_lf input:hover, .row_2_sec_lf select:hover {
+    background: #E6E6E6 ;
+}
+
+input:hover {
+   background: #E6E6E6 ; 
+       border-radius: 5px;
+    border: 1px solid #E6E6E6;
+}
+
+input:link {
+   background: #E6E6E6 ; 
+       border-radius: 5px;
+    border: 1px solid #E6E6E6;
+}
+*/
+
+textarea {
+    max-width: 665px;
+}
+
+.error_form{
+    color: red;
+    display: inline-block;
+}
+
+
+.custom_table {
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #999999;
+}
+
+
+
+.custom_table_labelrow{
+    font-weight: bold;
+    color:#ca401a;
+    border: 1px solid #ca401a;
+    padding: 3px;
+    background: #E6E6E6;
+}
+
+.custom_table td{
+  width: auto;
+  padding: 3px 5px;
+  text-align: left;
+  border: 1px solid #999999;
+}
+
+.edit_table_button{
+    width: 107px;
+    height: 26px;
+    background: url('../images/panel/button_blue_table.png') no-repeat;
+    color:white;
+    border: none;
+}
+
+.edit_table_button:hover{
+    background-position: 0px -26px;
+}
+
+.delete_table_button{
+    width: 107px;
+    height: 26px;
+    background: url('../images/panel/button_table_red.png') no-repeat;
+    color:white;
+    border: none;
+}
+
+.delete_table_button:hover{
+    background-position: 0px -26px;
+}
+
+.dz-default{
+    min-height: 200px;
+    background: #B2D1FF;
+    width: 60%;
+    border: dashed 2px #0066FF;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px auto;
+
+    padding: 15px 0px;
+}
+
+.dz-default span:nth-child(1){
+    font-style: italic;
+}
+
+.dz-preview{   
+    background: #66FF66;
+    width: 60%;
+    border: dashed 2px #0066FF;
+    border-top:none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.dz-preview img{
+    max-width: 100px;
+}
+
+.dz-error{
+    background: #FF9494;
+}
+
+.dz-success-mark, 
+.dz-error-mark { display: none;}
+
+.actually_logo_hootel{
+    margin: 15px auto;
+    text-align: center;
+    width: 60%;
+}
+
+.actually_logo_hootel img{
+    max-width: 100px;
+}
+
+.dz-remove {
+    text-decoration: none;
+    color: #800000;
+}
+
+.dz-remove:hover{
+    color: red;
+}
+
+.not_status, .public_status, .on_status{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.not_status{
+    color: black;
+}
+
+.public_status{
+    color: green;
+}
+
+.on_status{
+    color: red;
+}
+
+.sp_red{
+    color: red;
+}
+
+.sp_orange {
+    color: orange;
+}
+
+.hotel_row_panel_2 .komunikat{
+    text-align: left !important;
+}
+
+.list_reservation {
+    width: 650px;
+}

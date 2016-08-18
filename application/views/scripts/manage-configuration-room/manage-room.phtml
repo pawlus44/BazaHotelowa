@@ -1,0 +1,93 @@
+<?php //var_dump($this->test);?>
+
+<table id="table_list_conf_room" class='custom_table'>
+	<tr class='custom_table_labelrow'>
+		<td>
+		Nazwa konfiguracji
+		</td>
+
+		
+
+		<td class="td_width_220">
+		Edycja
+		</td>
+	</tr>
+
+	
+	<?php  
+        if(count($this->listRoomConfiguration)){
+		foreach($this->listRoomConfiguration as $single_conf){
+        ?>
+		<tr id="id_conf_<?php echo $single_conf->id;?>">
+			<td><?php echo $single_conf->name_configuration ;?></td>
+			<td class="td_width_220">
+                            <button class='edit_table_button' data-idconf="<?php echo $single_conf->id;?>">
+                            edytuj
+                            </button>
+                            <button class='delete_table_button' data-idconf="<?php echo $single_conf->id;?>">
+                            usuń
+                            </button>
+                        </td>
+		</tr>
+        <?php
+		}
+        } else {
+            echo "<tr class='clear_tr'>";
+            echo "<td><i>brak</i></td>";
+            echo "<td class='td_width_220'><i>brak</i></td>";
+            echo "</tr>";
+            
+        }
+	?>
+	
+	
+
+</table>
+
+<form id='configuration_room'>
+    <input type="hidden" name="id_conf" value="0">
+    
+	<div class="edit_2_container br_color_red ">
+		<div id='container_conf_room_level2' style="display: none;">
+			<div class="edit_1_info">
+	        Nowa konfiguracja pokoju
+	    	</div>
+
+			<div class="row_1_sec">
+				<div class="row_2_sec_lf">
+					<?php echo $this->formRoomEquipment->getElement('name_configuration')->render(); ?>
+					<div class='name_configuration_error error_form'>
+					</div>
+				</div>
+				<div class="row_2_sec row_radio">
+					<?php echo $this->formRoomEquipment->getElement('bathroom_in_room')->render(); 
+					?>
+					<div class='bathroom_in_room_error error_form'>
+					</div>
+				</div>
+			</div>
+
+			<div class="row_1_sec row_radio">
+				<?php echo $this->formRoomEquipment->getElement('equipment_room')->render(); 
+					?>
+					<div class='equipment_room_error error_form'>
+					</div>
+			</div>
+            <button id="anuluj_button" type="button" class="button_dark_orange" value="0">
+				Anuluj
+			</button>
+		</div>
+		
+		<div class="row_1_sec">
+			<button id="save_room_conf" type="button" class="button_dark_orange" value="0">
+				Dodaj nową konfigurację
+			</button>
+		</div>
+
+	</div>
+</form>
+<center><span class='error_info_manage_conf' style='font-weight: bold; color: red'>
+	
+</span></center>
+
+<script src="<?php echo $this->baseUrl('js/hotel/configuration_room.js') ?>"></script>

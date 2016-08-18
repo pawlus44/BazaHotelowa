@@ -1,0 +1,29 @@
+<div class='search_panel' id='search_panel'>
+	<div class="search_panel_level_1">
+		<?php echo $this->searchForm->getElement('city')->render(); ?>
+	</div>
+
+	<div class="search_panel_level_1">
+		<?php echo $this->searchForm->getElement('price_per_person')->render(); ?>
+	</div>
+
+	<div class="search_panel_level_1">
+		<?php echo $this->searchForm->getElement('type_of_hotel')->render(); ?>
+	</div>
+	<div style="clear: both"></div>
+	<button class="button_dark_blue" id="search_hotel_button" style="margin-top:30px;">
+         Wyszukaj
+    </button>
+
+</div>
+<br>
+<center>
+	<span>
+	
+	</span>
+</center>
+
+<div id='search_hotel_results'>
+</div>
+
+<script src="<?php echo $this->baseUrl('js/hotel/search.js') ?>"></script>

@@ -1,0 +1,23 @@
+                <ul id="header_menu" class="menu_clear">
+                    <a class="link_clear" href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>">
+                        <li>
+                            <div id="header_menu_house" style="width: 41px; padding-left: 12px;"><img src="<?php echo $this->serverUrl();?>/images/main_page/house.png" />
+                            </div>
+                        </li>
+                    </a>
+
+                    <a class="link_clear" href="
+                        <?php echo $this->url(array('controller' => 'auth-user', 'action' => 'register-user-form')); ?>">
+                        <li>
+                            <div style="width: 230px;" class="header_menu_text_1">Rejestracja
+                            </div>
+                        </li>
+                    </a>
+
+                    <a class="link_clear" href=" <?php echo $this->url(array('controller' => 'auth-user', 'action' => 'login-form')); ?>">
+                        <li>
+                            <div style="width: 230px;" class="header_menu_text_1">Zaloguj
+                            </div>
+                        </li>
+                    </a>
+                </ul>

@@ -1,0 +1,56 @@
+<?php //echo print_r($this->dataHotel)?>
+<?php //echo $this->dataHotel['sql'] ?>
+
+<div class="edit_1_info">
+Aktualny status hotelu: <span><?php echo $this->statusHotel; ?></span>
+</div>
+<div class="edit_2_container br_color_red ">
+ <form method="post" action="">
+ 	<div class="row_1_sec">
+        <?php echo $this->formStatus->getElement('status_hotel')->render(); ?>
+    </div>
+    
+    <div class="row_1_sec">
+        <?php echo $this->formStatus->getElement('submit_status_hotel')->render(); ?>
+    </div>
+    <div class="row_1_sec">
+    	<?php if($this->error_status){ ?>
+    		<center><span style="color:red; font-weight:bold;">Nie można opublikować hotelu. Sprawdź listę brakującyh elementów!</span></center>
+    	<?php } ?>
+    </div>
+ </form>
+</div>
+
+
+<div class="edit_1_info" style="margin-top: 40px;">
+Aktualny podgląda prezentacji hotelu w bazie:
+</div>
+<?php 
+	echo $this->singleHotel();
+?>
+
+<?php if(count($this->errorList)){?>
+	<div class="edit_1_info" style='margin-top:20px;'>
+		<span class='sp_red'>Brakujące</span> dane oraz informacje o hotelu:
+	</div>
+	<div>
+		<ol>
+		<?php foreach ($this->errorList as $key => $value) { ?>
+			<li><?php echo $value; ?></li>
+		<?php } ?>
+		</ol>
+	</div>
+<?php } ?>
+
+<?php if(count($this->warningsList)){?>
+	<div class="edit_1_info" style='margin-top:20px;'>
+		<span class='sp_orange'>Ostrzeżenia:</span>
+	</div>
+	<div>
+		<ol>
+		<?php foreach ($this->warningsList as $key => $value) { ?>
+			<li><?php echo $value; ?></li>
+		<?php } ?>
+		</ol>
+	</div>
+<?php } ?>

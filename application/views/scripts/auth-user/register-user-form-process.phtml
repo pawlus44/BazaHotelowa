@@ -1,0 +1,63 @@
+<?php if($this->isRegisterOk == 0){ ?>
+
+<div id="form_register" class="form_size_2 form_center">
+
+    <div style="width: 500px; height: 51px;" id="container_labelek" class="form_br form_br_blue form_center">
+        <div class="form_size_2_label ">
+            REJESTRACJA NOWEGO UŻYTKOWNIKA
+        </div>
+        <!--div class="form_size_1_logo">
+            <img src="../images/form/login.png" />
+        </div-->
+    </div>
+    <div class="form_content_2 form_br_content_2 form_br_grey">
+
+
+                <form action="<?php echo $this->formRegister->getAction();?>"
+              method="<?php echo $this->formRegister->getMethod();?>"
+              id="register_form">
+
+
+              <div class="input_container">
+                <?php echo $this->formRegister->getSubForm('form_user')->render(); ?>
+              </div>
+
+              <div class="input_container">
+                <?php echo $this->formRegister->getSubForm('form_user_info')->render(); ?>
+              </div>
+
+               <div class="input_container">
+                <?php echo $this->formRegister->getSubForm('form_user_address')->render(); ?>
+              </div>
+
+               <div class="input_container">
+                <?php echo $this->formRegister->getSubForm('form_user_contact')->render(); ?>
+              </div>
+
+              <div class="submit_register">
+                    <?php echo $this->formRegister->submit_register->render(); ?>
+              </div>
+
+
+
+        </form>
+       
+    </div>
+
+
+
+</div>
+<?php }else if($this->isLogin != 1){
+    //echo "Jest bardzo źle";
+} ?>
+
+
+<div class="komunikat">
+<?php echo $this->komunikat; ?>
+</div>
+
+<?php
+if($this->isRegisterOk == 1){
+    echo $this->render('partialViews/navigateMenuRegisterOk.phtml');
+}
+?>

@@ -1,0 +1,17 @@
+<div id='list_hotel'>
+
+    <?php foreach($this->listHotel as $singleHotelKey => $singleHotel){
+    ?>
+        <div class="single_hotel_home"> 
+        <?php echo $this-> partial('partialViews/singleHotel.phtml',
+            array('dataHotel' => $singleHotel)
+            );
+        ?>
+        </div>
+        
+    <?php } ?>
+
+
+</div>
+
+<script src="<?php echo $this->baseUrl('js/list_offers.js') ?>"></script>

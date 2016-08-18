@@ -1,0 +1,52 @@
+<?php if($this->isLogin == 0){ ?>
+<div id="form_login" class="form_size_1 form_center">
+    <div style="width: 237px; height: 51px;" id="container_labelek" class="form_br form_br_orange">
+        <div class="form_size_1_label ">
+            LOGOWANIE
+        </div>
+        <div class="form_size_1_logo">
+            <img src="../images/form/login.png" />
+        </div>
+    </div>
+    <div class="form_content form_br_content form_br_grey">
+        <form action="<?php echo $this->loginForm->getAction();?>"
+              method="<?php echo $this->loginForm->getMethod();?>"
+              id="login_form">
+
+
+              <div id="<?php echo 'div-'.'form_user' ;?>">
+                <?php echo $this->loginForm->getSubForm('subform_login')->render(); ?>
+
+              </div>
+              <div class="submit_login">
+                    <?php echo $this->loginForm->submit_login->render(); ?>
+              </div>
+
+
+
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+</div>
+<?php }else {} ?>
+
+
+<div class="komunikat">
+<?php echo $this->komunikat; ?>
+</div>
+
+<?php
+if($this->isLogin == 1){
+    echo $this->render('partialViews/navigateMenuClient.phtml');
+} elseif ($this->isLogin == 2) {
+    echo $this->render('partialViews/navigateMenuAdminHotel.phtml');
+}
+
+?>

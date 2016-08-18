@@ -1,0 +1,141 @@
+
+
+<form id="hotel_data" method="post">
+<div class="edit_2_container br_color_red ">
+    <div class="edit_1_info">
+        Dane kontaktowe hotelu
+    </div>
+
+    <div class="row_1_sec">
+    <?php  echo $this->hotelInformation->getElement('name_hotel')->render(); ?>
+    </div>
+
+    <div class="row_1_sec">
+      
+      <div class="row_2_sec_lf">
+        <?php echo $this->hotelInformation->getElement('type_of_hotel')->render(); ?>
+      </div>
+      
+      <div class="row_2_sec">
+        <?php echo $this->hotelInformation->getElement('nip')->render(); ?>
+      </div>
+    
+    </div>
+
+    <div class="row_1_sec">
+      <?php echo $this->hotelInformation->getElement('city')->render(); ?>
+    </div>
+
+    <div class="row_1_sec">
+      <?php echo $this->hotelInformation->getElement('street')->render(); ?>
+    </div>
+
+    <div class="row_1_sec">
+
+      <div class="row_2_sec_lf">
+        <?php echo $this->hotelInformation->getElement('number_bulid')->render(); ?>
+      </div>
+      
+      <div class="row_2_sec">
+        <?php echo $this->hotelInformation->getElement('zip_code')->render(); ?>
+      </div>
+
+    </div>
+
+    <div class="row_1_sec">
+
+      <div class="row_2_sec_lf">
+        <?php echo $this->hotelInformation->getElement('post')->render(); ?>
+      </div>
+      
+      <div class="row_2_sec">
+        <?php echo $this->hotelInformation->getElement('country')->render(); ?>
+      </div>
+
+    </div>
+
+</div>
+
+<div class="edit_2_container br_color_red ">
+    <div class="edit_1_info basic_description_hotel_label">
+        Opis hotelu: 
+    </div>
+    <div class="row_1_sec">
+      <?php echo $this->hotelDescription->getElement('basic_description_hotel')->render(); ?>
+    </div>
+    <div class="row_1_sec">
+      <?php echo $this->hotelDescription->getElement('extend_description_hotel')->render(); ?>
+    </div>
+</div>
+</form>
+
+
+</br>
+</br>
+<span style="font-size:15px; font-weight:bold;">Podgląd widoku hotelu:</span> 
+<button class='refresh_button'> Odświerz </button>
+<div class='hotel_panel' style="margin-top:10px;">
+   <div class='hotel_row_1'>
+       <div class='hotel_image'>
+       </div>
+       <div class='hotel_cont_info_1'>
+       <div class="text_center">
+       	   <div class="hotel_name hotel_name_input">
+       	   </div>
+       </div>
+       <div class="text_center">
+       	   <div class="hotel_address">
+           	   <span class="city_input"></span>, 
+               <br><span class="street_input"></span>
+               <span class="no_bulid_input"></span>,
+               <span class="post_code_input"></span>
+               <span class="post_city"></span>
+       	   </div>
+       </div>
+
+       <div class="text_center">
+       		<div class="text_center">
+       	   		<div class="hotel_best_ofert">
+       				Nocleg już od 10zł za osobę
+       	   		</div>
+       	   	</div>
+       	   	<div class="text_center">
+       	   		<div class="hotel_button_ofert">
+       	   			<button class="button_hotel_ofert_show">Pokaż pozostałe oferty</button>
+       				
+       	   		</div>
+       	   	</div>		
+       </div>
+
+       </div>
+       <div class='hotel_cont_info_2'> 
+       </div> 
+
+   </div>
+
+   <div class='hotel_row_2' style="display:inline-block !important;">
+      <span style="color: #000018;">Opis hotelu:</span><br>
+      <div class="desc_hotel_basic_input">
+
+      </div>
+      
+      <div class="desc_hotel_extend_input" style="color: green; display: none;">
+         
+      </div>
+
+      <div class="desc_hotel_button">
+          <button id="desc_hotel" style='display: none;' >
+              Rozwiń
+          </button>
+      </div>
+   </div>
+
+   <div class='hotel_row_3'>
+   Usługi:
+   </div>
+
+</div>
+<button id="button_save" type="button" class="button_dark_orange">Zapisz zmiany!</button>
+
+
+<script src="<?php echo $this->baseUrl('js/create_hotel.js') ?>"></script>

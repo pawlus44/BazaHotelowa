@@ -1,0 +1,88 @@
+<div class='hotel_panel' id='hotel_panel_<?php echo $this->dataHotel['hotel_info']['id_hotel']; ?>' style="margin-top:10px;">
+   <div class='hotel_row_1'>
+       <div class='hotel_image'>
+       		<img class='main_logo_hotel' src="
+       		<?php 
+              if($this->dataHotel['hotel_info']['name_logo_file'] != ''){
+                  echo $this->serverUrl()
+       				   .'/hotel_media/hotel_'
+       				   .$this->dataHotel['hotel_info']['id_hotel']
+       				   .'/'
+       				   .$this->dataHotel['hotel_info']['name_logo_file']; 
+              } else {
+                  echo $this->serverUrl()
+                 .'/hotel_media/hotel_default'
+                 .'/default.png'; 
+              }
+       			?>" 
+       		> 
+       </div>
+       <div class='hotel_cont_info_1'>
+           <div class="text_center">
+           	   <div class="hotel_name hotel_name_input">
+           	   		<?php echo $this->dataHotel['hotel_info']['name_hotel']; ?>
+           	   </div>
+           </div>
+           <div class="text_center">
+           	   <div class="hotel_address">
+               	    <?php echo $this->dataHotel['hotel_info']['city']; ?>, 
+                   <br><?php echo $this->dataHotel['hotel_info']['street']; ?> 
+                   	   <?php 
+                   	   		if($this->dataHotel['hotel_info']['number_bulid'] !=''){
+                   	   			echo $this->dataHotel['hotel_info']['number_bulid']; 
+                   	   		}
+                   	   		if($this->dataHotel['hotel_info']['number_local'] !=''){
+                   	   			echo '/'.$this->dataHotel['hotel_info']['number_local']; 
+                   	   		}
+                   	   ?>,
+                   	   <?php
+                   	   		echo $this->dataHotel['hotel_info']['code_post']; 
+                   	   		echo ' '.$this->dataHotel['hotel_info']['post']; 
+                   	   ?>
+           	   </div>
+           </div>
+
+           <div class="text_center free_reservation_label">
+
+           			Informacje:
+           	
+           </div>
+
+       </div>
+       <div class='hotel_cont_info_2'> 
+         <img src="
+            <?php echo $this->serverUrl()
+                   ."/images"
+                   ."/type_hotel"
+                   ."/"
+                   .$this->dataHotel['hotel_info']['name_image']; 
+            ?>" 
+          > 
+       </div> 
+
+   </div>
+   <div class='hotel_row_panel_2 select-data'>
+   <center>Data rezerwacji:</center>
+   		<div class='container_date_range'>
+		    <label for="from">Od:</label>
+			<input type="text" id="from" name="from">
+			<label for="to">do:</label>
+			<input type="text" id="to" name="to">
+      <center>
+        <span class='errors_data' style='color:red; font-weight:bold; display:none;'>
+        </span>
+      </center>
+		</div>
+		<button data-idhotel="<?php echo $this->dataHotel['hotel_info']['id_hotel']; ?>" class='button_dark_orange get_info_reservation'>
+			Sprawdź <br> dostępność pokoi
+		</button>
+   </div>
+   
+   <div class='info_reservation'></div>
+   <div class='save_reservation_result'></div>
+
+
+</div>
+
+<script src="<?php echo $this->baseUrl('js/reservation.js') ?>"></script>
+    

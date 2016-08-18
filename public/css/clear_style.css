@@ -1,0 +1,40 @@
+/*** klasa czyczszącza formatowanie menu poziomego ***/
+.menu_clear , .menu_clear li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu_clear li {
+	display: inline;
+	white-space: nowrap;
+        list-style: none;
+}
+
+/*** klasa czyszczącza formatowanie wyglądu linku ***/
+
+.link_clear, .link_clear:visited, .link_clear:active, .link_clear:hover, .link_clear:link {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*** wyśrodkowanie tekstu w pionie***/
+.middle_text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.middle_div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* divy czyszczące */
+.clear_1{
+    clear: both;
+    height: 15px;
+    width: 100%;
+}

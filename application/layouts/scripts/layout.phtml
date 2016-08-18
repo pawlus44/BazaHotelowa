@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+  <head>
+    <title>Baza hotelowa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('bootstrap/css/bootstrap.min.css'); ?>"/>
+    
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('css/clear_style.css'); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('css/website.css'); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('css/form.css'); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('css/decorator.css'); ?>"/>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl('css/display_hotel.css'); ?>"/>
+
+
+    <script src="<?php echo $this->baseUrl('js/jquery-1.11.1.min.js') ?>"></script>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+
+    <script src="<?php echo $this->baseUrl('js/website.js') ?>"></script>
+    <script src="<?php echo $this->baseUrl('js/hotel/my_function.js') ?>"></script>
+    
+    <?php // echo $this->jQuery(); ?>
+
+  </head>
+
+<body id="page">
+
+
+<div id="main_container" >
+    <div id="my_left_border">
+    </div>
+
+    <div id="page_container">
+
+        <div id="header">
+            <div id="header_logo">
+                <a class="link_clear" href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>">
+                    <img src="<?php echo $this->serverUrl();?>/images/main_page/header_logo.png"/>
+                </a>
+                
+            </div>
+
+            <div id="header_title">
+                <a class="link_clear" href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>">
+                BazaHotelowa.pl
+                </a>
+            </div>
+
+            <div id="header_menu_content">
+
+            <?php
+            //echo 'ISLOGIN: '.$this->isLogin;
+
+            echo $this->checkLoginMenu($this->isLogin, $this->whoIsLogin);
+            //echo $this->checkLoginMenu(1, 2);
+            if($this->isLogin != 0){
+            ?>
+
+           <div class="info_login"><b>Zalogowany jako:</b>
+                    <span style='color: green'><?php echo $this->loginName; ?></span>
+           </div>
+            <?php } ?>
+
+
+            </div>
+        </div>
+
+      <div id="container_path">
+                <div class="path">
+                    <div class="path_logo">
+                        <a class="link_clear" href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>">
+                        <img src="<?php echo $this->serverUrl();?>/images/main_page/house-blue.png" />
+                        </a>
+                    </div>
+                    <div class="path_src">
+                        <?php echo $this->mainPath; ?>
+                    </div>
+                </div>
+      </div>
+ 
+
+        <div id="container_info_toolbar">
+            <?php 
+                //echo 'INFOTOOLBAR: '.$this->infoToolbar;
+                echo $this->hideInfoToolbar($this->infoToolbar, $this->isLogin);
+            ?>
+        </div>
+
+        <div id="container_admin_panel">
+            <?php
+            echo $this->showManagementPanel($this->whichDisplayPanel);
+            ?>
+        </div>
+
+        <div class="docorator_1">
+        </div>
+
+
+        <div id="main_content">
+            <?php echo $this->layout()->content; ?>
+        </div>
+
+    </div>
+
+    <div id="my_right_border">
+    </div>
+
+    <div class="clear_1"></div>
+    <div id="footer">
+        <div id="footer_left">
+        <b>Wszelkie prawa zastrzeżone.</b>
+        Projekt pracy inżynieryjnej <br>Wydział Fizyki, Matematyki, Informatyki i Fizyki
+         Politechnika Krakowska<br>
+        <b>autor:</b> Paweł Poręba
+        <b>promotor:</b> dr. inż. Anna Dubowicka<br>
+        Copyright 2014
+
+
+        </div>
+
+        <div id="footer_right">
+            Technologie: HTML, CSS, Zend Framework 1, PHP, AJAX, JavaScript, jQuery<br>
+            <b>Kontakt</b>: pawelpor@op.pl
+
+        </div>
+
+    </div>
+
+
+</div>
+    
+          
+
+</body>
+</html>

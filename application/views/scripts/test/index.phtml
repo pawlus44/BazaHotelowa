@@ -1,0 +1,41 @@
+<?php
+//echo $this->form;
+?>
+
+
+
+<div class="submit_area">
+     <?php echo $this->formText('message', 'empty', array('size' => 32, 'id' => 'message')) ?>
+     <?php echo $this->formSubmit('submitTo', 'submit', array('id' => 'submitTo')) ?>
+
+     <div class="show-msg"></div>
+</div>
+
+
+
+<div class='dz-preview dz-file-preview'>  
+<div class='dz-details'>    
+	
+	<div class='dz-filename'>
+		<span data-dz-name></span>
+	</div>   
+	
+	<div class='dz-size' data-dz-size>
+		
+	</div>    
+	
+	<img data-dz-thumbnail>  
+</div>
+	
+            
+
+            Dostępne:
+<?php print_r($this->availableRoom)?>
+<br><br>
+Nie dostępne:
+<?php print_r($this->notAvailableRoom)?>
+<br><br>
+Wszystkie:
+<?php print_r($this->allRoom)?>
+
+<?php print_r($this->availableRoom); ?>

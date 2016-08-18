@@ -1,0 +1,143 @@
+<?php
+/*
+foreach($this->listRoom as $single_room){
+var_dump($single_room);
+}*/
+//echo $this->sql;
+
+//echo count($this->listRoom);
+//var_dump($this->listRoom);
+?>
+
+<table id="table_list_room" class='custom_table'>
+	<tr class='custom_table_labelrow'>
+		<td>
+		Oznaczenie pokoju
+		</td>
+
+		<td>
+		Typ pokoju
+		</td>
+
+		<td>
+		Ile os.
+		</td>
+
+		<td class="td_width_220">
+		Edycja
+		</td>
+	</tr>
+
+<?php  
+        if(count($this->listRoom)){
+			foreach($this->listRoom as $single_room){
+	        ?>
+			<tr id="id_room_<?php echo $single_room->id;?>">
+				<td><?php echo $single_room->name_room ;?></td>
+				<td><?php echo $single_room->name_configuration;?></td>
+				<td><?php echo $single_room->number_bad;?></td>
+				<td class="td_width_220">
+	                            <button class='edit_table_button' data-idroom="<?php echo $single_room->id;?>">
+	                            edytuj
+	                            </button>
+	                            <button class='delete_table_button' data-idroom="<?php echo $single_room->id;?>">
+	                            usuń
+	                            </button>
+	                        </td>
+			</tr>
+	        <?php
+	    	}
+        } else {
+            echo "<tr class='clear_tr'>";
+            echo "<td><i>brak</i></td>";
+            echo "<td><i>brak</i></td>";
+            echo "<td><i>brak</i></td>";
+            echo "<td class='td_width_220'><i>brak</i></td>";
+            echo "</tr>";
+            
+        }
+	?>
+</table>
+
+
+<form id='room_details'>
+	<input type="hidden" name="id_room" value="0">
+
+	<div class="edit_2_container br_color_red ">
+		<div id='container_room_level2' style="display: none;">
+			<div class="edit_1_info">
+	        Dodawanie/edycja właściowości pokoju
+	    	</div>
+			<div class="row_1_sec">
+				<div class="row_2_sec_lf">
+					<?php echo $this->formRoom
+									->getElement('name_room')
+									->render(); 
+					?>
+					<div class='name_room_error error_form'>
+					</div>
+				</div>
+				<div class="row_2_sec">
+					<?php echo $this->formRoom
+									->getElement('id_configuration')
+									->render(); 
+					?>			
+					<div class='id_configuration_error error_form'>
+					</div>			
+				</div>
+			</div>
+
+			<div class="row_1_sec">
+				<div class="row_2_sec_lf">
+					<?php echo $this->formRoom
+									->getElement('price_per_person')
+									->render(); 
+					?>					
+					<div class='price_per_person_error error_form'>
+					</div>			
+				</div>
+				<div class="row_2_sec">
+					<?php echo $this->formRoom
+									->getElement('price_per_room')
+									->render(); 
+					?>				
+					<div class='price_per_room_error error_form'>
+					</div>			
+				</div>
+			</div>
+
+			<div class="row_1_sec">
+				<div class="row_2_sec_lf">
+					<?php echo $this->formRoom->getElement('number_bad')->render(); 
+					?>
+					<div class='number_bad_error error_form'>
+					</div>
+				</div>
+				<div class="row_2_sec"></div>
+
+			</div>
+
+			<div class="row_1_sec" style="clear: both;">
+					<?php echo $this->formRoom
+									->getElement('description_room')
+									->render(); 
+					?>		
+				<div class='description_room_error error_form'>
+				</div>					
+			</div>
+			    <button id="anuluj_button" type="button" class="button_dark_orange" value="0">
+            		Anuluj
+    			</button>
+		</div>
+
+		<div class="row_1_sec">
+			<button id="save_room" type="button" class="button_dark_orange" value="0">
+				Dodaj pokój
+			</button>
+		</div>
+
+	</div>
+
+</form>
+
+<script src="<?php echo $this->baseUrl('js/hotel/add_room.js') ?>"></script>
